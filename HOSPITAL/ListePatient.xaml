@@ -1,0 +1,29 @@
+﻿<Window x:Class="HOSPITAL.ListePatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HOSPITAL"
+        mc:Ignorable="d"
+        Title="ListePatient" Height="450" Width="800">
+    <Grid>
+        <Label Content="Liste des patients Enregistrés" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF0606B0"/>
+        <DataGrid x:Name="dgPatients" HorizontalAlignment="Left" Height="301" Margin="10,47,0,0" VerticalAlignment="Top" Width="774"
+               AutoGenerateColumns="False" ColumnWidth="100" ItemsSource="{Binding}" SelectionMode="Single" FontWeight="Bold" IsReadOnly="True" SelectionChanged="dgPatients_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="NAM" Header="Numero d'assurance maladie" FontSize="16" FontWeight="Bold" Binding="{Binding NAM}" />
+                <DataGridTextColumn Header="Nom" Binding="{Binding NOM_PATIENT}" />
+                <DataGridTextColumn Header="Prénom" Binding="{Binding PRENOM_PATIENT}" />
+                <DataGridTextColumn Header="Adresse" Binding="{Binding ADRESSE_PATIENT}" />
+                <DataGridTextColumn Header="Ville" Binding="{Binding VILLE_PATIENT}" />
+                <DataGridTextColumn Header="Province" Binding="{Binding PROVINCE_PATIENT}" />
+                <DataGridTextColumn Header="Code-Postal" Binding="{Binding CODE_POSTAL_PATIENT}" />
+                <DataGridTextColumn Header="Telephone" Binding="{Binding TELEPHONE_PATIENT}" />
+                <DataGridTextColumn Header="Assurance" Binding="{Binding ID_ASSURANCE}" />
+                <DataGridTextColumn Header="Proche Parent" Binding="{Binding REF_PARENT}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="615,378,0,0" VerticalAlignment="Top" Width="75" Click="btnAnnuler_Click"/>
+
+    </Grid>
+</Window>

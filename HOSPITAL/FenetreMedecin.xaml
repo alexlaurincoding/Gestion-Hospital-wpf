@@ -1,0 +1,42 @@
+﻿<Window x:Class="HOSPITAL.FenetreMedecin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HOSPITAL"
+        mc:Ignorable="d"
+        Title="FenetreMedecin" Height="434.763" Width="686.23">
+    <Grid>
+        <Label Content="Fenetre Medecin" HorizontalAlignment="Left" Margin="73,10,0,0" VerticalAlignment="Top" Height="30" Width="155" FontSize="18" FontWeight="Bold" Foreground="#FF0E4EBC"/>
+        <ComboBox x:Name="cbIdentifierMedecin" HorizontalAlignment="Left" Margin="101,65,0,0" VerticalAlignment="Top" Width="139" Height="25" 
+                  IsSynchronizedWithCurrentItem="True"  ItemsSource="{Binding}" SelectionChanged="cbIdentifierMedecin_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+
+                        <TextBlock.Text>
+
+                            <MultiBinding StringFormat="{}DR. {0}">
+                                <Binding Path="NOM_MEDECIN"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Identification :" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="86"/>
+        <DataGrid x:Name="dgListePatient" HorizontalAlignment="Left" Height="207" Margin="10,109,0,0" VerticalAlignment="Top" Width="663" AutoGenerateColumns="False" IsReadOnly="True"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Numero d'assurance maladie" Binding="{Binding NAM}" Width="165"/>
+                <DataGridTextColumn Header="Nom" Binding="{Binding PATIENT.NOM_PATIENT}" Width="150"/>
+                <DataGridTextColumn Header="Prenom" Binding="{Binding PATIENT.PRENOM_PATIENT}" Width="150"/>
+                <DataGridTextColumn Header="Numero de lit" Binding="{Binding NUMERO_LIT}" Width="85"/>
+                <DataGridTextColumn Header="Date d'admission" Binding= "{Binding DATE_ADMISSION, StringFormat=\{0:dd MMMM yyyy\}}" Width="105"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Donner Congé" HorizontalAlignment="Left" Margin="346,345,0,0" VerticalAlignment="Top" Width="111" Height="30" Click="Button_Click"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="490,345,0,0" VerticalAlignment="Top" Width="103" Height="30" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

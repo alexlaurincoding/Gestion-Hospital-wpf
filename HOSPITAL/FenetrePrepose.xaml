@@ -1,0 +1,136 @@
+﻿<Window x:Class="HOSPITAL.FenetrePrepose"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HOSPITAL"
+        mc:Ignorable="d"
+        Title="FenetrePrepose" Height="551.788" Width="556.813">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <TabControl  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,0,-2.6,0">
+            <TabItem Header="Nouveau Patient">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="gbInformationPatient" Header="Information Patient" HorizontalAlignment="Left" Height="270" Margin="10,91,0,0" VerticalAlignment="Top" Width="251">
+                        <Grid HorizontalAlignment="Left" Height="252" VerticalAlignment="Top" Width="241" Margin="0,0,-1.8,-4.8">
+                            <Label Content="Nom :" HorizontalAlignment="Left" Margin="68,25,0,0" VerticalAlignment="Top"/>
+                            <Label Content="NAM :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="66,0,0,0"/>
+                            <Label Content="Prenom :" HorizontalAlignment="Left" Margin="52,52,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Adresse :" HorizontalAlignment="Left" Margin="52,80,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Ville :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,106,0,0"/>
+                            <Label Content="Province :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,132,0,0"/>
+                            <Label Content="Code Postal :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,160,0,0"/>
+                            <Label Content="Telephone :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,185,0,0"/>
+                            <Label Content="Date de Naissance :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-4,208,0,0"/>
+                            <TextBox x:Name="txtPatientNAM" MaxLength="12" HorizontalAlignment="Left" Height="23" Margin="114,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="None"/>
+                            <TextBox x:Name="txtPatientNom" HorizontalAlignment="Left" Height="23" Margin="114,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtPatientPrenom" HorizontalAlignment="Left" Height="23" Margin="114,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtPatientAdresse" HorizontalAlignment="Left" Height="23" Margin="114,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtPatientVille" HorizontalAlignment="Left" Height="23" Margin="114,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtPatientCodeP" HorizontalAlignment="Left" Height="23" Margin="114,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtPatientTel" HorizontalAlignment="Left" Height="23" Margin="114,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <DatePicker x:Name="datePatient" HorizontalAlignment="Left" Margin="114,210,0,0" VerticalAlignment="Top" Width="120"/>
+                            <ComboBox x:Name="cbPatientProvince" HorizontalAlignment="Left" Margin="114,133,0,0" VerticalAlignment="Top" Width="120">
+                                <ComboBoxItem Content="Québec"/>
+                                <ComboBoxItem Content="Ontario"/>
+                                <ComboBoxItem Content="Terre-Neuve"/>
+                                <ComboBoxItem Content="Nouveau-Brunswick"/>
+                                <ComboBoxItem Content="Isle-Du-Prince-Edward"/>
+                                <ComboBoxItem Content="Saskatchewan"/>
+                                <ComboBoxItem Content="Manitoba"/>
+                                <ComboBoxItem Content="Alberta"/>
+                                <ComboBoxItem Content="Colombie-Britanique"/>
+                                <ComboBoxItem Content="Nouvelle-Écosse"/>
+                            </ComboBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Information Parent" HorizontalAlignment="Left" Height="218" Margin="266,91,0,0" VerticalAlignment="Top" Width="221">
+                        <Grid HorizontalAlignment="Left" Height="199" VerticalAlignment="Top" Width="211" Margin="0,0,-2.2,-4.6">
+                            <Label Content="Nom :" HorizontalAlignment="Left" Margin="34,5,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Prenom :" HorizontalAlignment="Left" Margin="18,32,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Adresse :" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Ville :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,86,0,0"/>
+                            <Label Content="Province :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,112,0,0"/>
+                            <Label Content="Code Postal :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,140,0,0"/>
+                            <Label Content="Telephone :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,165,0,0"/>
+                            <TextBox x:Name="txtParentNom" HorizontalAlignment="Left" Height="23" Margin="80,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtParentPrenom" HorizontalAlignment="Left" Height="23" Margin="80,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtParentAdresse" HorizontalAlignment="Left" Height="23" Margin="80,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtParentVille" HorizontalAlignment="Left" Height="23" Margin="80,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtParentCodeP" HorizontalAlignment="Left" Height="23" Margin="80,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="txtParentTel" HorizontalAlignment="Left" Height="23" Margin="80,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <ComboBox x:Name="cbParentProvince" HorizontalAlignment="Left" Margin="80,113,0,0" VerticalAlignment="Top" Width="120">
+                                <ComboBoxItem Content="Québec"/>
+                                <ComboBoxItem Content="Ontario"/>
+                                <ComboBoxItem Content="Terre-Neuve"/>
+                                <ComboBoxItem Content="Nouveau-Brunswick"/>
+                                <ComboBoxItem Content="Isle-Du-Prince-Edward"/>
+                                <ComboBoxItem Content="Saskatchewan"/>
+                                <ComboBoxItem Content="Manitoba"/>
+                                <ComboBoxItem Content="Alberta"/>
+                                <ComboBoxItem Content="Colombie-Britanique"/>
+                                <ComboBoxItem Content="Nouvelle-Écosse"/>
+                            </ComboBox>
+                        </Grid>
+                    </GroupBox>
+                    <Label Content="     Fenetre Préposé&#xA;Processus d'admission" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Width="179" Height="54" FontSize="16" FontWeight="Bold" Foreground="#FF0606B0"/>
+                    <GroupBox Header="Assurance" HorizontalAlignment="Left" Height="103" Margin="266,314,0,0" VerticalAlignment="Top" Width="226">
+                        <Grid HorizontalAlignment="Left" Height="84" Margin="0,0,-2.4,-3.2" VerticalAlignment="Top" Width="216">
+                            <ComboBox x:Name="cbAssurances" HorizontalAlignment="Left" Margin="86,5,0,0" VerticalAlignment="Top" Width="120"
+                                      IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="NOM_COMPAGNIE"/>
+                            <Label Content="Compagnie :" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top"/>
+                            <CheckBox x:Name="checkboxSansAssurances" Content="Sans Assurances" HorizontalAlignment="Left" Margin="7,49,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="cbSansAssurances_Unchecked"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="btnPatientEnreg" Content="Enregistrer" HorizontalAlignment="Left" Margin="24,366,0,0" VerticalAlignment="Top" Width="75" Click="btnPatientEnreg_Click"/>
+                    <Button x:Name="btnPatientAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="24,398,0,0" VerticalAlignment="Top" Width="75" Click="btnPatientAnnuler_Click"/>
+                    <Button x:Name="btnPatientQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="24,429,0,0" VerticalAlignment="Top" Width="75" Click="btnPatientQuitter_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Admission">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="gbInformationPatient_Copy" Header="Information Patient" HorizontalAlignment="Left" Height="322" VerticalAlignment="Top" Width="300">
+                        <Grid HorizontalAlignment="Left" Height="303" VerticalAlignment="Top" Width="290" Margin="0,0,-2,-3.8">
+                            <Label Content="Nom :" HorizontalAlignment="Left" Margin="68,25,0,0" VerticalAlignment="Top"/>
+                            <Label Content="NAM :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="66,0,0,0"/>
+                            <Label Content="Prenom :" HorizontalAlignment="Left" Margin="52,52,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Adresse :" HorizontalAlignment="Left" Margin="52,80,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Ville :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,106,0,0"/>
+                            <Label Content="Province :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,132,0,0"/>
+                            <Label Content="Code Postal :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,160,0,0"/>
+                            <Label Content="Telephone :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,185,0,0"/>
+                            <Label Content="Date de Naissance :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-4,208,0,0"/>
+                            <TextBox x:Name="txtAdmissionNAM" HorizontalAlignment="Left" Height="23" Margin="114,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionNom" HorizontalAlignment="Left" Height="23" Margin="114,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionPrenom" HorizontalAlignment="Left" Height="23" Margin="114,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionAdresse" HorizontalAlignment="Left" Height="23" Margin="114,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionVille" HorizontalAlignment="Left" Height="23" Margin="114,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionCodeP" HorizontalAlignment="Left" Height="23" Margin="114,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionTel" HorizontalAlignment="Left" Height="23" Margin="114,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <DatePicker x:Name="dateNaissAdmission" HorizontalAlignment="Left" Margin="114,210,0,0" VerticalAlignment="Top" Width="166" IsTodayHighlighted="False" IsEnabled="False"/>
+                            <Label Content="Proche Parent :" HorizontalAlignment="Left" Margin="20,234,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Assurance :" HorizontalAlignment="Left" Margin="40,260,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtAdmissionProvince" HorizontalAlignment="Left" Height="23" Margin="114,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionParent" HorizontalAlignment="Left" Height="23" Margin="114,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                            <TextBox x:Name="txtAdmissionAssur" HorizontalAlignment="Left" Height="23" Margin="114,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Selectionner N.A.M" HorizontalAlignment="Left" Height="116" Margin="351,10,0,0" VerticalAlignment="Top" Width="138">
+                        <Grid HorizontalAlignment="Left" Height="98" Margin="0,0,-2.4,-4.4" VerticalAlignment="Top" Width="128">
+                            <Button x:Name="btnSelectionNam" Content="Valider" HorizontalAlignment="Left" Margin="22,37,0,0" VerticalAlignment="Top" Width="75" Click="btnSelectionNam_Click"/>
+                            <ComboBox x:Name="cbSelectionNam" HorizontalAlignment="Left" Margin="2,10,0,0" VerticalAlignment="Top" Width="120"
+                                      IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="NAM"/>
+                            <Button x:Name="btnAdmisAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="23,69,0,0" VerticalAlignment="Top" Width="75" Click="btnAdmisAnnuler_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="btnAdmisInscrire" Content="Inscrire" HorizontalAlignment="Left" Margin="372,150,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="btnAdmisInscrire_Click"/>
+                    <Button x:Name="btnAdmisConsulter" Content="Consulter Liste" HorizontalAlignment="Left" Margin="372,199,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="btnAdmisConsulter_Click"/>
+                    <Button x:Name="btnAdmisQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="372,250,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="btnPatientQuitter_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
